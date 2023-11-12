@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useState } from 'react'
-import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta";
+import { SignInButton, UserButton } from '@clerk/nextjs';
 
 export default function Header() {
     const [ativo, setAtivo] = useState(false);
@@ -47,9 +48,9 @@ export default function Header() {
                     </ul>
                 </nav>
                 <div className="flex items-center ">
-                        <SignedIn>
-                            <UserButton />
-                        </SignedIn>
+                    <SignedIn>
+                        <UserButton />
+                    </SignedIn>
                     <SignedOut>
                         <SignInButton mode="modal">
                             <button
