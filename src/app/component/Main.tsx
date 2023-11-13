@@ -1,15 +1,16 @@
-import Image from "next/image";
+import Slide from "../lib/Slide";
+import TempleateProduto from "./TempleateProdutos";
 
 export default function Main() {
     return (
-        <div className="w-full">
-            <Image
-                src={'/img/banner.png'}
-                alt="banner"
-                width={990}
-                height={120}
-                className="w-full"
-            />
+        <div>
+            <div className="w-full">
+                <Slide
+                    img="/img/banner.png"
+                    alt="Banner"
+                />
+            </div>
+            <TempleateProduto />
         </div>
     )
 }

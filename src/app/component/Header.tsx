@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from 'react'
-import { SignedIn, SignedOut } from "@clerk/nextjs/app-beta";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { SignInButton, UserButton } from '@clerk/nextjs';
 
 export default function Header() {
@@ -47,19 +47,21 @@ export default function Header() {
                         <li className="p-2 cursor-pointer">Beleza</li>
                     </ul>
                 </nav>
-                <div className="flex items-center ">
-                    <SignedIn>
-                        <UserButton />
-                    </SignedIn>
+                {/* <div className="ml-20 lg:ml-0">
+                    <div className="ml-40 lg:ml-0">
+                        <SignedIn>
+                            <UserButton />
+                        </SignedIn>
+                    </div>
                     <SignedOut>
-                        <SignInButton mode="modal">
+                        <SignInButton mode="modal" >
                             <button
                                 className="border rounded-md border-gray-400 px-3 py-2">
                                 Fazer Login
                             </button>
                         </SignInButton>
                     </SignedOut>
-                </div>
+                </div> */}
             </header >
         </div >
     )
