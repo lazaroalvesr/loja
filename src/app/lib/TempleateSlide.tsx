@@ -8,66 +8,45 @@ import Image from "next/image";
 import { Swiper, SwiperSlide, } from "swiper/react";
 import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-export default function TempleateSlide() {
-    return (
-        <div>
 
-            <Swiper
-                spaceBetween={30}
-                effect={'fade'}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation
-                modules={[Autoplay, Pagination, Navigation]}
-                className="swiper-root"
-
-            >
-                <SwiperSlide>
-                    <Image
-                        src={'/img/banner_img/banner.png'}
-                        alt="banner"
-                        width={1090}
-                        height={120}
-                        className="w-full"
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image
-                        src={'/img/banner_img/banner_2.png'}
-                        alt="banner"
-                        width={990}
-                        height={120}
-                        className="w-full"
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image
-                        src={'/img/banner_img/banner_4.png'}
-                        alt="banner"
-                        width={990}
-                        height={120}
-                        className="w-full"
-                    />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image
-                        src={'/img/banner_img/banner_5.png'}
-                        alt="banner"
-                        width={990}
-                        height={120}
-                        className="w-full"
-                    />
-                </SwiperSlide>
-            </Swiper>
-        </div >
-    )
+interface CarouselProps {
+    images: {
+        src: string;
+        width: number;
+        height: number;
+    }[];
 }
+
+const TempleateSlide: React.FC<CarouselProps> = ({ images }) => {
+    return (
+        <Swiper
+            spaceBetween={30}
+            effect={'fade'}
+            centeredSlides={true}
+            autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+            }}
+            pagination={{
+                clickable: true,
+            }}
+            navigation
+            modules={[Autoplay, Pagination, Navigation]}
+            className="swiper-root"
+        >
+            {images.map((image, index) => (
+                <SwiperSlide key={index}>
+                    <Image
+                        src={image.src}
+                        alt={`banner_${index}`}
+                        width={image.width}
+                        height={image.height}
+                        className="w-full"
+                    />
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
+};
+
+export default TempleateSlide;

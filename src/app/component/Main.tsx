@@ -1,11 +1,11 @@
-import TempleateSlide from '../lib/TempleateSlide';
+import Slide from './Slide';
 import TempleateProduto from "./TempleateProdutos";
 
 export default function Main() {
     return (
         <div>
             <div>
-                <TempleateSlide />
+                <Slide />
             </div>
             <div className='-ml-28'>
                 <TempleateProduto />
