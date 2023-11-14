@@ -18,11 +18,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider localization={ptBR}>
       <html lang="pt-BR">
         <body className={inter.className}>
           <Header />
           {children}
         </body>
       </html>
+    </ClerkProvider>
   )
 }
