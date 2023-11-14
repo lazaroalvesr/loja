@@ -1,16 +1,15 @@
-import Slide from "../lib/Slide";
+import TempleateSlide from '../lib/TempleateSlide';
 import TempleateProduto from "./TempleateProdutos";
 
 export default function Main() {
     return (
         <div>
-            <div className="w-full">
-                <Slide
-                    img="/img/banner.png"
-                    alt="Banner"
-                />
+            <div>
+                <TempleateSlide />
             </div>
-            <TempleateProduto />
-        </div>
+            <div className='-ml-28'>
+                <TempleateProduto />
+            </div>
+        </div >
     )
 }

@@ -36,7 +36,7 @@ export default function Header() {
                     </button>
                     <ul className={` flex gap-4 absolute transition-all lg:static lg:h-auto 
               right-0 m-auto items-center justify-center 
-              left-0 top-[90px]  ${ativo ? 'w-[390px] bg-[#e1e4e7]  md:w-full z-50 rounded-xl flex-col' : 'h-0 overflow-hidden'
+              left-0 top-[90px]  ${ativo ? 'w-[390px] bg-[#e1e4e7]  md:w-full z-50 rounded-xl flex-col h-screen' : 'h-0 overflow-hidden'
                         }    lg:flex-row text-center lg:text-left lg-top-0 `}
                     >
                         <li className="p-2 cursor-pointer">Camisas</li>
@@ -47,8 +47,8 @@ export default function Header() {
                         <li className="p-2 cursor-pointer">Beleza</li>
                     </ul>
                 </nav>
-                {/* <div className="ml-20 lg:ml-0">
-                    <div className="ml-40 lg:ml-0">
+                <div className="ml-20 lg:ml-0">
+                    <div className="ml-2 lg:ml-0">
                         <SignedIn>
                             <UserButton />
                         </SignedIn>
@@ -61,7 +61,7 @@ export default function Header() {
                             </button>
                         </SignInButton>
                     </SignedOut>
-                </div> */}
+                </div>
             </header >
         </div >
     )

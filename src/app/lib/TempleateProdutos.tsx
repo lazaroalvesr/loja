@@ -4,10 +4,10 @@ import TempleateProdutoProps from "../Interfaces/Produtos";
 
 export default function Templeate({ href, img, imgIcon, alt, descricaoBtn }: TempleateProdutoProps) {
     return (
-        <div className="">
-            <div className="">
+        <div>
+            <div>
                 <div className="
-                 lg:w-80 h-[390px] w-72 border-2
+                 lg:w-72 h-[390px] w-72 border-2
                  border-gray-800 rounded-md">
                     <div className="bg-gray-300">
                         <Image

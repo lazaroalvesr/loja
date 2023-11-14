@@ -10,6 +10,7 @@
     }
 }
 
+
 body {
     background-color: #e1e4e7;
 }
@@ -49,3 +50,12 @@ body {
 .hamburguer.ativo::before {
     transform: rotate(-135deg);
 }
+
+.swiper-root .swiper-button-prev,
+.swiper-root .swiper-button-next {
+    @apply w-4 h-2;
+    /* Ajuste o tamanho conforme necessário */
+    @apply  text-gray-500;
+    /* Cor de fundo azul e texto branco */
+}
+
